@@ -1,1 +1,7 @@
 # TCAV
+
+I recently came a really interesting developement in explainable AI, known as Quantitative Testing with Concept Activation Vectors (TCAV), based on the work done in [this paper](https://arxiv.org/abs/1711.11279). I decided that I wanted to explore some potential uses of this method, such as searching for specific concepts within a dataset. 
+
+This repo contains an [implementation of a TCAV model](https://github.com/shaikadish/TCAV/blob/main/TCAV.py), a [model wrapper](https://github.com/shaikadish/TCAV/blob/main/ModelExplainer.py) for extracting layer activations and gradients of a model, and a [feature extractor](https://github.com/shaikadish/TCAV/blob/main/FeatureExtractor.py) for extracting model activations and gradients for an entire dataset. In addition to these useful objects for TCAV experiments, I have also included a [training protocal](https://github.com/shaikadish/TCAV/blob/main/Trainer.py) for PyTorch CNN models.
+
+A [demo](https://github.com/shaikadish/TCAV/blob/main/demo.py) which makes use of the above scripts is also included in the form of a tutorial. This tutorial also explores the use of TCAV models for identifying specific concepts within a dataset, and the relationship between a Concept Activation Vector (CAV) and a model's layer activations.

@@ -42,9 +42,10 @@ class ModelExplainer():
         self.layers = layers
 
         # Register forward hooks to track layer activations
-        def save_activation(layer_name): def hook(model, input, output):
+        def save_activation(layer_name): 
+          def hook(model, input, output):
                 self.intermediate_activations[layer_name] = output
-            return hook
+          return hook
 
         for l in self.layers:
           self.model.features[l].register_forward_hook(save_activation(str(l)))
